@@ -194,6 +194,7 @@ export default function Home() {
               >
                 {continents.map((cont) => (
                   <MenuItem
+                    key={cont}
                     value={cont}
                     sx={{
                       fontSize: "0.875rem",
