@@ -9,7 +9,7 @@ export async function loader({ params }) {
 
   const borders = choosenCountry.borders;
 
-  let choosenBorders = [];
+  const choosenBorders = [];
 
   if (borders) {
     data.map((country) => {
