@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL Here](https://github.com/AbuEisha/rest-countries-api-challenge)
+- [Live Site URL Here](https://rest-countries-api-live.pages.dev/)
 
 ## My process
 
@@ -64,6 +64,5 @@ Through building this project, I strengthened my understanding of client-side dy
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- [GitHub Profile](https://github.com/AbuEisha)
+- [Frontend Mentor Profile](https://www.frontendmentor.io/profile/AbuEisha)
