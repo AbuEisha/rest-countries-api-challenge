@@ -20,7 +20,7 @@ export default function CountryCard({
         borderRadius: ".25rem",
         overflow: "hidden",
         textDecoration: "none",
-        boxShadow: "0px 1px 30px 0px hsl(0deg 0% 0% / 20%)",
+        boxShadow: "0px 1px 15px 0px hsl(0deg 0% 0% / 15%)",
         transition: "transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
         "&:hover": {
           transform: "translateY(-1.25rem)",
@@ -37,7 +37,7 @@ export default function CountryCard({
         alt={`${name} Flag`}
         sx={{
           display: "block",
-          height: { xs: "20rem", md: "10rem" },
+          height: "10rem",
           width: "100%",
           objectFit: "cover",
           objectPosition: "center",
@@ -45,10 +45,7 @@ export default function CountryCard({
       />
       <Box
         sx={{
-          padding: {
-            xs: "5rem 3.125rem 5.8125rem 3.125rem",
-            md: "1.75rem 1.5rem 2.75rem 1.5rem",
-          },
+          padding: "1.75rem 1.5rem 2.75rem 1.5rem",
         }}
       >
         <Typography
@@ -57,7 +54,7 @@ export default function CountryCard({
             fontSize: "1rem",
             fontWeight: 800,
             color: "text.primary",
-            marginBlockEnd: { xs: "2.5rem", md: "1rem" },
+            marginBlockEnd: "1rem",
           }}
         >
           {name}
@@ -89,7 +86,7 @@ export default function CountryCard({
           sx={{
             flexDirection: "row",
             gap: ".25rem",
-            marginBlock: { xs: "1rem", md: ".25rem" },
+            marginBlock: { xs: ".5rem", md: ".25rem" },
           }}
         >
           <Typography

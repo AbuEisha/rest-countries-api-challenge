@@ -45,7 +45,7 @@ export default function NotFound() {
           textDecoration: "none",
           backgroundColor: "background.paper",
           color: "text.primary",
-          boxShadow: "0px 1px 16px 2px hsl(0deg 0% 0% / 20%)",
+          boxShadow: "0px 1px 8px 0px hsl(0deg 0% 0% / 15%)",
           "&:hover": {
             "& svg": {
               animation: "bounceLeft 0.5s ease-in-out infinite alternate",

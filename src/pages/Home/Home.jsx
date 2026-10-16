@@ -46,16 +46,16 @@ export default function Home() {
         <Stack
           direction={{ xs: "column", md: "row" }}
           sx={{
-            paddingBlockEnd: { xs: "4rem", md: "3rem" },
+            paddingBlockEnd: "3rem",
             justifyContent: "space-between",
-            gap: { xs: "5rem", md: "2.5rem" },
+            gap: "2.5rem",
           }}
         >
           <Box
             sx={{
               position: "relative",
               borderRadius: ".25rem",
-              boxShadow: "0px 1px 30px 0px hsl(0deg 0% 0% / 20%)",
+              boxShadow: "0px 1px 15px 0px hsl(0deg 0% 0% / 15%)",
               overflow: "hidden",
             }}
           >
@@ -78,6 +78,9 @@ export default function Home() {
               onChange={(e) => setSearch(e.target.value)}
               variant="filled"
               placeholder="Search for a country..."
+              slotProps={{
+                htmlInput: { "aria-label": "Search for a country" },
+              }}
               sx={{
                 "& .MuiFilledInput-root": {
                   backgroundColor: "background.paper",
@@ -105,7 +108,7 @@ export default function Home() {
                 },
                 "& .MuiInputBase-input": {
                   width: { xs: "100%", md: "30rem" },
-                  height: { xs: "6rem", md: "3.5rem" },
+                  height: { xs: "3rem", md: "3.5rem" },
                   boxSizing: "border-box",
                   padding: "1rem 1rem 1rem 4.5rem",
                   "&::placeholder": {
@@ -122,8 +125,8 @@ export default function Home() {
             sx={{
               minWidth: "12.5rem",
               maxWidth: "25rem",
-              height: { xs: "6rem", md: "3.5rem" },
-              boxShadow: "0px 1px 30px 0px hsl(0deg 0% 0% / 20%)",
+              height: { xs: "3rem", md: "3.5rem" },
+              boxShadow: "0px 1px 15px 0px hsl(0deg 0% 0% / 15%)",
               borderRadius: ".25rem",
             }}
           >
@@ -146,7 +149,7 @@ export default function Home() {
                   }
                   return selected;
                 }}
-                inputProps={{ "aria-label": "Without label" }}
+                inputProps={{ "aria-label": "Filter by region" }}
                 MenuProps={{
                   slotProps: {
                     paper: {
@@ -154,8 +157,8 @@ export default function Home() {
                         backgroundImage: "none",
                         backgroundColor: "background.paper",
                         color: "text.primary",
-                        marginBlockStart: { xs: ".5rem", md: ".25rem" },
-                        boxShadow: "0px 1px 30px 0px hsl(0deg 0% 0% / 20%)",
+                        marginBlockStart: ".25rem",
+                        boxShadow: "0px 1px 15px 0px hsl(0deg 0% 0% / 15%)",
                         "& .MuiList-root": {
                           paddingBlock: { xs: "1.5rem", md: "0.875rem" },
                         },
@@ -171,10 +174,8 @@ export default function Home() {
                     "& .MuiSelect-select": {
                       display: "flex",
                       alignItems: "center",
-                      padding: {
-                        xs: "1rem 3rem 1rem 3rem",
-                        md: "1rem 2.5rem 1rem 1.5rem",
-                      },
+                      padding: "1rem 2.5rem 1rem 1.5rem",
+
                       boxSizing: "border-box",
                       height: "100%",
                     },
@@ -188,7 +189,7 @@ export default function Home() {
                     },
                   },
                   "& .MuiSvgIcon-root": {
-                    right: { xs: "1.75rem", md: ".75rem" },
+                    right: "1rem",
                   },
                 }}
               >
@@ -199,8 +200,8 @@ export default function Home() {
                     sx={{
                       fontSize: "0.875rem",
                       minHeight: "auto",
-                      paddingBlock: { xs: ".75rem", md: "0.375rem" },
-                      paddingInline: { xs: "3rem", md: "1.5rem" },
+                      paddingBlock: "0.375rem",
+                      paddingInline: "1.5rem",
                     }}
                   >
                     {cont}
@@ -211,7 +212,7 @@ export default function Home() {
           </Box>
         </Stack>
 
-        <Grid container spacing={{ xs: "5rem", md: "4.6875rem" }}>
+        <Grid container spacing={{ xs: "2.5rem", md: "4.6875rem" }}>
           {filteredCountries.map((country) => (
             <Grid key={country.name} size={{ xs: 12, md: 4, lg: 3 }}>
               <CountryCard

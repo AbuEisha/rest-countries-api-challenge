@@ -23,9 +23,9 @@ export default function Layout() {
         sx={{
           position: "sticky",
           width: "100%",
-          height: { xs: "10rem", md: "5rem" },
+          height: "5rem",
           backgroundColor: "background.paper",
-          boxShadow: "0px -14px 18px 8px hsl(0deg 0% 0% / 20%)",
+          boxShadow: "0px 4px 12px 0px hsl(0deg 0% 0% / 10%)",
         }}
       >
         <Stack
@@ -43,6 +43,7 @@ export default function Layout() {
         >
           <Link
             component={RouteLink}
+            to={"/"}
             sx={{
               textDecoration: "none",
               color: "text.primary",
@@ -66,6 +67,7 @@ export default function Layout() {
           </Link>
           <Button
             disableRipple
+            aria-pressed={mode === "dark"}
             sx={{
               gap: ".75rem",
               padding: 0,
@@ -97,7 +99,7 @@ export default function Layout() {
       <Box
         component="main"
         sx={{
-          minHeight: { xs: "calc(100vh - 10rem)", md: "calc(100vh - 5rem)" },
+          minHeight: "calc(100vh - 5rem)",
           backgroundColor: "background.default",
         }}
       >
