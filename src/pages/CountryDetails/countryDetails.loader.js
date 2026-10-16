@@ -6,6 +6,7 @@ export async function loader({ params }) {
     (country) =>
       country.name.toLowerCase().replaceAll(" ", "-") === countryName,
   );
+  if (!choosenCountry) throw new Response("Not Found", { status: 404 });
 
   const borders = choosenCountry.borders;
 
@@ -18,26 +19,15 @@ export async function loader({ params }) {
     });
   }
 
-  let choosenCurr = "";
-
-  choosenCountry.currencies.forEach((curr, index) => {
-    if (index < choosenCountry.currencies.length - 1) {
-      choosenCurr += curr.name + ", ";
-    } else choosenCurr += curr.name;
-  });
-
-  let choosenLang = "";
-
-  choosenCountry.languages.forEach((lang, index) => {
-    if (index < choosenCountry.languages.length - 1) {
-      choosenLang += `${lang.name}, `;
-    } else choosenLang += lang.name;
-  });
+  const currencies =
+    choosenCountry.currencies?.map((c) => c.name).join(", ") ?? "";
+  const languages =
+    choosenCountry.languages?.map((l) => l.name).join(", ") ?? "";
 
   return {
     country: choosenCountry,
     borders: choosenBorders,
-    currencies: choosenCurr,
-    languages: choosenLang,
+    currencies,
+    languages,
   };
 }
